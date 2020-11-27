@@ -56,8 +56,8 @@
                     </svg>
                 </div>
 
-<!-- Content Wrapper. Contains page content -->
-<div>
+  <!-- Content Wrapper. Contains page content -->
+  <div>
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -114,7 +114,7 @@
                   </div>
                   <!-- /btn-group -->
                   <div class="input-group">
-                    <input id="new-event" type="text" class="form-control" placeholder="Event Title">
+                    <input id="new-event" type="text" class="form-control" placeholder="Event Title" disabled>
 
                     <div class="input-group-append">
                       <button id="add-new-event" type="button" class="btn btn-primary">Add</button>

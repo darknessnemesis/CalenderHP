@@ -24,6 +24,7 @@ Route::get('/homepage', function () {
 });
 
 
+
 //Route for normal user
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/home', 'HomeController@index');
