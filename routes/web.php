@@ -16,19 +16,26 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/mainpage', function () {
     return view('mainpage');
 });
-
 Route::get('/homepage', function () {
     return view('homepage');
 });
 
+
+//Route for normal user
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/home', 'HomeController@index');
+});
+//Route for admin
+Route::group(['prefix' => 'admin'], function(){
+    Route::group(['middleware' => ['admin']], function(){
+        Route::get('/admin', 'admin\AdminController@index');
+    });
+});
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

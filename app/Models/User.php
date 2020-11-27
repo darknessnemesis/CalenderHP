@@ -9,6 +9,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+
+    const ADMIN_TYPE = 1;
+    const DEFAULT_TYPE = 0;
+
     use HasFactory, Notifiable;
 
     /**
@@ -21,6 +25,10 @@ class User extends Authenticatable
         'email',
         'password',
     ];
+
+    public function isAdmin(){
+        return $this->type === self::ADMIN_TYPE;
+    }
 
     /**
      * The attributes that should be hidden for arrays.
