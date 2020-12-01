@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/mainpage', function () {
-    return view('mainpage');
+Route::get('/adminwaitleave', function () {
+    return view('admin_waitleave');
 });
 Route::get('/homepage', function () {
     return view('homepage');

@@ -9,9 +9,6 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -53,10 +50,17 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">ปฏิทินกิจกรรม</a>
+                            <a class="nav-link" href="{{ url('/home') }}">ปฏิทินกิจกรรม</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">แบบฟอร์การลา</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            ระบบการลา
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ url('/adminwaitleave') }}">รอการอนุมัติ</a>
+                                <a class="nav-link" href="{{ url('/mainpage') }}">ประวัติการอนุมัติ</a>
+                                <a class="nav-link" href="{{ url('/mainpage') }}">สถิติการลา</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ url('/') }}">สมาชิก</a>
@@ -86,11 +90,11 @@
                                 <a class="dropdown-item" href="{{ url('/') }}">
                                         Setting
                                     </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
