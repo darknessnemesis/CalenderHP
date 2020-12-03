@@ -12,7 +12,6 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
 
         <!-- Styles -->
         <style>
@@ -68,7 +67,7 @@
       <thead>
         <tr>
           <th>
-          <a>การอนุมัติ</a>
+            <a>การอนุมัติ</a>
           </th>
           <th class="th-lg">
             <a>วันที่ทำรายการ
@@ -95,6 +94,9 @@
               <i class="fas fa-sort ml-1"></i>
             </a>
           </th>
+          <th>
+            <a>ลบประวัติ</a>
+          </th>
         </tr>
       </thead>
 
@@ -102,58 +104,58 @@
       <tbody>
         <tr>
           <th scope="row">
-          <button style="width: 30px;height: 30px;background: green;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
-          <button style="width: 30px;height: 30px;background: red;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
+          <button style="background: none" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:green"></i></button>
           </th>
           <td>Mark</td>
           <td>Otto</td>
           <td>@mdo</td>
           <td>Mark</td>
           <td>Otto</td>
+          <td><button style="background: none" onclick="removeInputField(this);"><i class="fa fa-trash-o" style="font-size:150%;color:red"></i></button></td>
         </tr>
         <tr>
           <th scope="row">
-          <button style="width: 30px;height: 30px;background: green;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
-          <button style="width: 30px;height: 30px;background: red;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
+          <button style="background: none" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:green"></i></button>
           </th>
           <td>Jacob</td>
           <td>Thornton</td>
           <td>@fat</td>
           <td>Jacob</td>
           <td>Thornton</td>
+          <td><button style="background: none" onclick="removeInputField(this);"><i class="fa fa-trash-o" style="font-size:150%;color:red"></i></button></td>
         </tr>
         <tr>
           <th scope="row">
-          <button style="width: 30px;height: 30px;background: green;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
-          <button style="width: 30px;height: 30px;background: red;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
+          <button style="background: none" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:red"></i></button>
           </th>
           <td>Larry</td>
           <td>the Bird</td>
           <td>@twitter</td>
           <td>Larry</td>
           <td>the Bird</td>
+          <td><button style="background: none" onclick="removeInputField(this);"><i class="fa fa-trash-o" style="font-size:150%;color:red"></i></button></td>
         </tr>
         <tr>
           <th scope="row">
-          <button style="width: 30px;height: 30px;background: green;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
-          <button style="width: 30px;height: 30px;background: red;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
+          <button style="background: none" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:green"></i></button>
           </th>
           <td>Paul</td>
           <td>Topolski</td>
           <td>@P_Topolski</td>
           <td>Paul</td>
           <td>Topolski</td>
+          <td><button style="background: none" onclick="removeInputField(this);"><i class="fa fa-trash-o" style="font-size:150%;color:red"></i></button></td>
         </tr>
         <tr>
           <th scope="row">
-          <button style="width: 30px;height: 30px;background: green;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-check" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
-          <button style="width: 30px;height: 30px;background: red;border-radius: 10%" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:white;display:block;margin-left: uto;margin-right:auto"></i></button>
+          <button style="background: none" onclick="removeInputField(this);"><i class="fa fa-close" style="font-size:150%;color:red"></i></button>
           </th>
           <td>Larry</td>
           <td>the Bird</td>
           <td>@twitter</td>
           <td>Larry</td>
           <td>the Bird</td>
+          <td><button style="background: none" onclick="removeInputField(this);"><i class="fa fa-trash-o" style="font-size:150%;color:red"></i></button></td>
         </tr>
       </tbody>
       <!--Table body-->

@@ -19,6 +19,15 @@ Route::get('/', function () {
 Route::get('/adminwaitleave', function () {
     return view('admin_waitleave');
 });
+Route::get('/adminhistoryleave', function () {
+    return view('admin_historyleave');
+});
+Route::get('/adminstatic', function () {
+    return view('admin_static');
+});
+Route::get('/adminmember', function () {
+    return view('admin_member');
+});
 Route::get('/homepage', function () {
     return view('homepage');
 });

@@ -58,18 +58,22 @@
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="nav-link" href="{{ url('/adminwaitleave') }}">รอการอนุมัติ</a>
-                                <a class="nav-link" href="{{ url('/mainpage') }}">ประวัติการอนุมัติ</a>
-                                <a class="nav-link" href="{{ url('/mainpage') }}">สถิติการลา</a>
+                                <a class="nav-link" href="{{ url('/adminhistoryleave') }}">ประวัติการอนุมัติ</a>
+                                <a class="nav-link" href="{{ url('/adminstatic') }}">สถิติการลา</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">สมาชิก</a>
+                            <a class="nav-link" href="{{ url('/adminmember') }}">สมาชิก</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">สถิติ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">ตั้งค่าระบบ</a>
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            ตั้งค่า
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="nav-link" href="{{ url('/adminwaitleave') }}">ตั้งค่าทั่วไป</a>
+                                <a class="nav-link" href="{{ url('/adminhistoryleave') }}">ประเภทการลา</a>
+                                <a class="nav-link" href="{{ url('/adminstatic') }}">แผนกที่ลา</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"
@@ -82,23 +86,18 @@
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('/') }}">
-                                        Profile
-                                    </a>
-                                <a class="dropdown-item" href="{{ url('/') }}">
-                                        Setting
-                                    </a>
+                                    Profile
+                                </a>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                                     {{ __('Logout') }}
                                 </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                                 </div>
                             </li>
                         @endguest

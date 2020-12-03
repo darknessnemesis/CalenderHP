@@ -53,19 +53,10 @@
                             @endif
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">ปฏิทินกิจกรรม</a>
+                            <a class="nav-link" href="{{ url('/') }}">ส่งคำขอลา</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">แบบฟอร์การลา</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">สมาชิก</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">สถิติ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/') }}">ตั้งค่าระบบ</a>
+                            <a class="nav-link" href="{{ url('/') }}">ตรวจสอบการอนุมัติ</a>
                         </li>
                         <li class="nav-item">
                         <a class="nav-link" href="{{ route('logout') }}"
@@ -82,19 +73,15 @@
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ url('/') }}">
                                         Profile
-                                    </a>
-                                <a class="dropdown-item" href="{{ url('/') }}">
-                                        Setting
-                                    </a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
+                                </a>
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                    onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
                                 </div>
                             </li>
                         @endguest
