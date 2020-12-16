@@ -16,11 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/adminwaitleave', function () {
-    return view('admin_waitleave');
+Route::get('/adminwait', function () {
+    return view('admin_wait');
 });
-Route::get('/adminhistoryleave', function () {
-    return view('admin_historyleave');
+Route::get('/adminhistory', function () {
+    return view('admin_history');
 });
 Route::get('/adminstatic', function () {
     return view('admin_static');

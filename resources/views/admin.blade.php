@@ -145,7 +145,6 @@
 <script src="../plugins/fullcalendar/main.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="../dist/js/demo.js"></script>
-<!-- Page specific script -->
 
 <script>
   $(function () {
