@@ -22,14 +22,23 @@ Route::get('/adminwait', function () {
 Route::get('/adminhistory', function () {
     return view('admin_history');
 });
-Route::get('/adminstatic', function () {
-    return view('admin_static');
+Route::get('/adminamount', function () {
+    return view('admin_amount');
 });
 Route::get('/adminmember', function () {
     return view('admin_member');
 });
+Route::get('/adminstatic', function () {
+    return view('admin_static');
+});
+Route::get('/admintest', function () {
+    return view('admin_test');
+});
 Route::get('/homepage', function () {
     return view('homepage');
+});
+Route::get('/test', function () {
+    return view('admin/homepage.blade.php');
 });
 
 

@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- Title -->
-    <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -35,7 +33,7 @@
             </li>
             <!-- Logo End -->
             <li class="nav-item d-none d-sm-inline-block">
-                <a href="../../home" class="nav-link">Home</a>
+                <a href="../../home" class="nav-link">หน้าแรก</a>
             </li>
             <!-- ระบบลางาน -->
             <li class="nav-item d-none d-sm-inline-block dropdown">
@@ -52,9 +50,18 @@
                     <i></i>ประวัติการอนุมัติ
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="../../adminstatic" class="dropdown-item">
-                    <i></i>Test
+                <a href="../../adminamount" class="dropdown-item">
+                    <i></i>จำนวนวันที่ลาได้
                 </a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="../../adminmember" class="nav-link">สมาชิก</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="../../adminstatic" class="nav-link">สถิติการลา</a>
+            </li>
+            <li class="nav-item d-none d-sm-inline-block">
+                <a href="../../admintest" class="nav-link">TestPage</a>
             </li>
         </ul>
 

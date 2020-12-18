@@ -29,7 +29,7 @@
   <!-- AdminLTE for demo purposes -->
   <script src="../../dist/js/demo.js"></script>
   <style>
-select option[value="wait"] {
+select option[value="1"] {
   background: blue;
 }
 
@@ -56,12 +56,12 @@ select option[value="4"] {
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Approve History</h1>
+            <h1>Wait for Leave</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/home">Home</a></li>
-              <li class="breadcrumb-item active">Approve History</li>
+              <li class="breadcrumb-item active">Wait for Leave</li>
             </ol>
           </div>
         </div>
@@ -73,10 +73,10 @@ select option[value="4"] {
       <div class="container-fluid">
       <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Bordered Table</h3>
+                <h3 class="card-title">รอการอนุมัติ</h3>
                 <div class="card-tools">
-                  <div class="input-group input-group-sm float-right" style="width: 150px;">
-                    <button type="submit" class="btn btn-default bg-primary">บันทึก</button>
+                  <div class="input-group input-group-sm float-right" >
+                    <button type="submit" class="btn btn-default bg-primary" style="margin-right: 10px;">บันทึก</button>
                   </div>
                 </div>
               </div>
@@ -101,7 +101,7 @@ select option[value="4"] {
                           <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
                         </div>
                       </td>
-                      <td>20 Mar.</td>
+                      <td><input type="date" /></td>
                       <td><select class="badge bg-light">
                         <option value="wait">รออนุมัติ</option>
                         <option value="approve">อนุมัติ</option>
@@ -116,7 +116,7 @@ select option[value="4"] {
                           <div class="progress-bar bg-warning" style="width: 70%"></div>
                         </div>
                       </td>
-                      <td>20 Mar.</td>
+                      <td><input type="date" /></td>
                       <td><select class="badge bg-light">
                         <option value="wait">รออนุมัติ</option>
                         <option value="approve">อนุมัติ</option>
@@ -131,9 +131,9 @@ select option[value="4"] {
                           <div class="progress-bar bg-primary" style="width: 30%"></div>
                         </div>
                       </td>
-                      <td>20 Mar.</td>
-                      <td><select class="badge bg-light">
-                        <option value="wait">รออนุมัติ</option>
+                      <td><input type="date" /></td>
+                      <td><select class="badge bg-light" id="bgcolor">
+                        <option class="bgapprove()" value="wait">รออนุมัติ</option>
                         <option value="approve">อนุมัติ</option>
                         <option value="disapprovel">ไม่อุมัติ</option>
                       </select></td>
@@ -146,7 +146,7 @@ select option[value="4"] {
                           <div class="progress-bar bg-success" style="width: 90%"></div>
                         </div>
                       </td>
-                      <td>20 Mar.</td>
+                      <td><input type="date" /></td>
                       <td><select class="badge bg-light">
                         <option value="wait">รออนุมัติ</option>
                         <option class="bg-red" value="approve">อนุมัติ</option>
@@ -177,6 +177,20 @@ select option[value="4"] {
 </div>
 <!-- ./wrapper -->
 
+<script>
+function bgapprove() {
+  var val = new cell.getValue();
+  var color;
+  if (val == "wait") {
+    color = "bg-white";
+  } else if (val == "approve") {
+    color = "bg-green";
+  } else {
+    color = "bg-red";
+  }
+  document.getElementById("bgcolor").innerHTML = color;
+}
+</script>
 
 </body>
 </html>

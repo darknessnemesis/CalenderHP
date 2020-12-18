@@ -112,10 +112,10 @@
         fields: [
             { name: "Name", type: "text", width: 150 },
             { name: "Category", type: "select", items: db.countries, valueField: "Id", textField: "Name", width: 200 },
-            { name: "FirstDate", type: "number", width: 100 },
+            { name: "FirstDate", type: "datetime", width: 100 },
             { name: "LastDate", type: "number", width: 100 },
             { name: "Approve", type: "checkbox", title: "Approve" },
-            { name: "control", type: "control", title: "Edit" }
+            { type: "control" }
         ]
     });
   });
