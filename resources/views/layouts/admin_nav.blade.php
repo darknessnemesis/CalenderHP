@@ -57,8 +57,21 @@
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="../../adminmember" class="nav-link">สมาชิก</a>
             </li>
-            <li class="nav-item d-none d-sm-inline-block">
-                <a href="../../adminstatic" class="nav-link">สถิติการลา</a>
+            <li class="nav-item d-none d-sm-inline-block dropdown">
+                <a class="nav-link" data-toggle="dropdown" href="#">สถิติการลา</a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                <span class="dropdown-divider"></span>
+                <a href="../../adminstatic1" class="dropdown-item">
+                    <i></i>ค้นหา
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="../../adminstatic2" class="dropdown-item">
+                    <i></i>รายเดือน
+                </a>
+                <div class="dropdown-divider"></div>
+                <a href="../../adminamount" class="dropdown-item">
+                    <i></i>รายปี
+                </a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
                 <a href="../../admintest" class="nav-link">TestPage</a>

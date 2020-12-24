@@ -29,47 +29,9 @@
   <script src="../../dist/js/adminlte.min.js"></script>
   <!-- AdminLTE for demo purposes -->
   <script src="../../dist/js/demo.js"></script>
-  <style>
-select option[value="wait"] {
-  background-color: blue;
-}
-
-select option[value="approve"] {
-  background: green;
-}
-
-select option[value="disapprovel"] {
-  background: red;
-}
-
-select option[value="4"] {
-  background: rgba(250, 250, 250, 0.3);
-}
-.greenColor{
-    background-color: #33CC33;
-}
-.redColor{
-    background-color: #E60000;
-}
-.others {color:black}
-  </style>
 </head>
 
 <body class="hold-transition sidebar-mini">
-<script>
-$(document).ready(function(){
-  $('$select').change(function() {
-    var current = $('select').val();
-    if (current === '1'){
-      $("#select").css('background','#FFFFCC');
-    } else {
-      $("#select").css('background','#CC33CC');
-    }
-    var current = $('select').val();
-  });
-});
-</script>
-
 <!-- Site wrapper -->
 <div class="wrapper">
   <!-- Content Wrapper. Contains page content -->
@@ -83,6 +45,7 @@ $(document).ready(function(){
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item active">Leave System</li>
               <li class="breadcrumb-item active">Wait for Leave</li>
             </ol>
           </div>
@@ -118,28 +81,20 @@ $(document).ready(function(){
                     <tr>
                       <td>1.</td>
                       <td>Update software</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                        </div>
-                      </td>
                       <td><input type="date" /></td>
-                      <td><select id="reviewAction">
-                        <option value="1">รออนุมัติ</option>
-                        <option class="greenColor" value="2">อนุมัติ</option>
-                        <option class="redColor" value="3">ไม่อนุมัติ</option>
+                      <td><input type="date" /></td>
+                      <td><select class="badge bg-light">
+                        <option value="wait">รออนุมัติ</option>
+                        <option value="approve">อนุมัติ</option>
+                        <option value="disapprovel">ไม่อนุมัติ</option>
                       </select></td>
                     </tr>
                     <tr>
                       <td>2.</td>
                       <td>Clean database</td>
-                      <td>
-                        <div class="progress progress-xs">
-                          <div class="progress-bar bg-warning" style="width: 70%"></div>
-                        </div>
-                      </td>
                       <td><input type="date" /></td>
-                      <td><select>
+                      <td><input type="date" /></td>
+                      <td><select class="badge bg-light">
                         <option value="wait">รออนุมัติ</option>
                         <option value="approve">อนุมัติ</option>
                         <option value="disapprovel">ไม่อนุมัติ</option>
@@ -148,26 +103,18 @@ $(document).ready(function(){
                     <tr>
                       <td>3.</td>
                       <td>Cron job running</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar bg-primary" style="width: 30%"></div>
-                        </div>
-                      </td>
                       <td><input type="date" /></td>
-                      <td><select id="select" name="123">
-                        <option class="others" value="1">รออนุมัติ</option>
-                        <option class="others" value="2">อนุมัติ</option>
-                        <option class="others" value="3">ไม่อนุมัติ</option>
+                      <td><input type="date" /></td>
+                      <td><select class="badge bg-light">
+                        <option value="wait">รออนุมัติ</option>
+                        <option value="approve" id="select2">อนุมัติ</option>
+                        <option value="disapprovel">ไม่อนุมัติ</option>
                       </select></td>
                     </tr>
                     <tr>
                       <td>4.</td>
                       <td>Fix and squish bugs</td>
-                      <td>
-                        <div class="progress progress-xs progress-striped active">
-                          <div class="progress-bar bg-success" style="width: 90%"></div>
-                        </div>
-                      </td>
+                      <td><input type="date" /></td>
                       <td><input type="date" /></td>
                       <td><select class="badge bg-light">
                         <option value="wait">รออนุมัติ</option>
@@ -190,7 +137,7 @@ $(document).ready(function(){
               </div>
             </div>
             <!-- /.card -->
-</div>
+      </div>
 
     </section>
     <!-- /.content -->
@@ -255,7 +202,6 @@ function sortTable(n) {
   }
 }
 </script>
-
 </body>
 </html>
 @endsection

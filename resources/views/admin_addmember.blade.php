@@ -48,6 +48,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="/home">Home</a></li>
+              <li class="breadcrumb-item"><a href="/adminmember">Member</a></li>
               <li class="breadcrumb-item active">Add Member</li>
             </ol>
           </div>
@@ -104,7 +105,8 @@
           <div class="form-group row">
             <label for="inputPassword3" class="col-sm-2 col-form-label">สถานะสมาชิก</label>
             <div class="col-sm-10">
-            <select class="select2" multiple="multiple" data-placeholder="User status" data-dropdown-css-class="select2-purple" style="width: 100%;">
+            <select class="form-control" style="width: 100%;">
+              <option> </option>
               <option>แอดมิน</option>
               <option>ผู้มีสิทธิอนุมัติการลา</option>
               <option>สมาชิกทั่วไป</option>
@@ -123,9 +125,9 @@
           </div>
           </div>
           <!-- /.card-body -->
-          <div class="card-footer">
+          <div class="footer">
             <button type="submit" class="btn btn-info">Sign up</button>
-            <button type="submit" class="btn btn-default float-right">Cancel</button>
+            <a href="/adminmember" class="btn btn-default float-right">Cancel</a>
           </div>
           <!-- /.card-footer -->
         </form>

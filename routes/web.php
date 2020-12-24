@@ -28,8 +28,14 @@ Route::get('/adminamount', function () {
 Route::get('/adminmember', function () {
     return view('admin_member');
 });
-Route::get('/adminstatic', function () {
-    return view('admin_static');
+Route::get('/adminaddmember', function () {
+    return view('admin_addmember');
+});
+Route::get('/adminstatic1', function () {
+    return view('admin_static1');
+});
+Route::get('/adminstatic2', function () {
+    return view('admin_static2');
 });
 Route::get('/admintest', function () {
     return view('admin_test');
